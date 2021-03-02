@@ -20,10 +20,10 @@ class CalcButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.all(3),
       child: SizedBox(
-        width: 65,
-        height: 65,
+        width: 70,
+        height: 70,
         child: FlatButton(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50.0),
