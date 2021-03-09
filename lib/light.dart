@@ -53,14 +53,15 @@ class CalcAppLightState extends State<CalcAppLight> {
       debugShowCheckedModeBanner: false,
       title: 'Calculator',
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFF5E35B1),
         appBar: AppBar(
           leading: Icon(
             Icons.calculate,
             color: Colors.white,
           ),
+          centerTitle: true,
           title: Text(
-            "Kalkulator ",
+            "Kalkulator",
             style: TextStyle(color: Colors.white),
           ),
           actions: <Widget>[
@@ -73,18 +74,23 @@ class CalcAppLightState extends State<CalcAppLight> {
           ],
           flexibleSpace: Container(
             decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    colors: [Color(0xFF8400FF), Color(0xFF3B009B)],
-                    begin: FractionalOffset.topLeft,
-                    end: FractionalOffset.bottomRight),
-                image: DecorationImage(
-                    image: AssetImage("assets/pattern.png"),
-                    fit: BoxFit.none,
-                    repeat: ImageRepeat.repeat)),
+              gradient: LinearGradient(
+                  colors: [Color(0xFF5E35B1), Color(0xFF5E35B1)],
+                  begin: FractionalOffset.topLeft,
+                  end: FractionalOffset.bottomRight),
+              // image: DecorationImage(
+              //     image: AssetImage("assets/pattern.png"),
+              //     fit: BoxFit.none,
+              //     repeat: ImageRepeat.repeat)
+            ),
           ),
         ),
         body: Container(
-          padding: EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/wal9.jpg"), fit: BoxFit.cover),
+          ),
+          padding: EdgeInsets.all(1),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
@@ -96,7 +102,7 @@ class CalcAppLightState extends State<CalcAppLight> {
                     style: GoogleFonts.rubik(
                       textStyle: TextStyle(
                         fontSize: 24,
-                        color: Color(0xFF545F61),
+                        color: Color(0xFF5E35B1),
                       ),
                     ),
                   ),
@@ -104,14 +110,17 @@ class CalcAppLightState extends State<CalcAppLight> {
                 alignment: Alignment(1.0, 1.0),
               ),
               Container(
+                height: 200,
                 child: Padding(
                   padding: const EdgeInsets.all(12),
                   child: Text(
                     _expression,
+                    overflow: TextOverflow.fade,
+                    softWrap: true,
                     style: GoogleFonts.rubik(
                       textStyle: TextStyle(
-                        fontSize: 48,
-                        color: Colors.black,
+                        fontSize: 68,
+                        color: Color(0xFF1C1279),
                       ),
                     ),
                   ),
@@ -124,13 +133,15 @@ class CalcAppLightState extends State<CalcAppLight> {
                 children: <Widget>[
                   CalcButton(
                     text: 'AC',
-                    fillColor: 0xFF5E35B1,
-                    textSize: 20,
+                    // fillColor: 0xFF5E35B1,
+                    fillColor: 0x005E35B1,
+                    textSize: 45,
                     callback: allClear,
+                    textColor: 0xFF1C1279,
                   ),
                   CalcButton(
                     text: 'C',
-                    fillColor: 0xFF5E35B1,
+                    fillColor: 0x005E35B1,
                     callback: clear,
                   ),
                   CalcButton(
@@ -153,17 +164,17 @@ class CalcAppLightState extends State<CalcAppLight> {
                   CalcButton(
                     text: '7',
                     callback: numClick,
-                    fillColor: 0xFF262626,
+                    fillColor: 0x005E35B1,
                   ),
                   CalcButton(
                     text: '8',
                     callback: numClick,
-                    fillColor: 0xFF262626,
+                    fillColor: 0x005E35B1,
                   ),
                   CalcButton(
                     text: '9',
                     callback: numClick,
-                    fillColor: 0xFF262626,
+                    fillColor: 0x005E35B1,
                   ),
                   CalcButton(
                     text: 'x',
@@ -180,17 +191,17 @@ class CalcAppLightState extends State<CalcAppLight> {
                   CalcButton(
                     text: '4',
                     callback: numClick,
-                    fillColor: 0xFF262626,
+                    fillColor: 0x005E35B1,
                   ),
                   CalcButton(
                     text: '5',
                     callback: numClick,
-                    fillColor: 0xFF262626,
+                    fillColor: 0x005E35B1,
                   ),
                   CalcButton(
                     text: '6',
                     callback: numClick,
-                    fillColor: 0xFF262626,
+                    fillColor: 0x005E35B1,
                   ),
                   CalcButton(
                     text: '-',
@@ -207,17 +218,17 @@ class CalcAppLightState extends State<CalcAppLight> {
                   CalcButton(
                     text: '1',
                     callback: numClick,
-                    fillColor: 0xFF262626,
+                    fillColor: 0x005E35B1,
                   ),
                   CalcButton(
                     text: '2',
                     callback: numClick,
-                    fillColor: 0xFF262626,
+                    fillColor: 0x005E35B1,
                   ),
                   CalcButton(
                     text: '3',
                     callback: numClick,
-                    fillColor: 0xFF262626,
+                    fillColor: 0x005E35B1,
                   ),
                   CalcButton(
                     text: '+',
@@ -234,18 +245,18 @@ class CalcAppLightState extends State<CalcAppLight> {
                   CalcButton(
                     text: '.',
                     callback: numClick,
-                    fillColor: 0xFF262626,
+                    fillColor: 0x005E35B1,
                   ),
                   CalcButton(
                     text: '0',
                     callback: numClick,
-                    fillColor: 0xFF262626,
+                    fillColor: 0x005E35B1,
                   ),
                   CalcButton(
                     text: '00',
                     callback: numClick,
                     textSize: 26,
-                    fillColor: 0xFF262626,
+                    fillColor: 0x005E35B1,
                   ),
                   CalcButton(
                     text: '=',
